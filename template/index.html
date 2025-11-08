@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{HEADLINE}} · Impression Direct 360</title>
+  <style>
+    :root{--bg:#0b1020;--card:#111935;--text:#e6ecff;--muted:#9aa7d7;--acc:#5cabff}
+    *{box-sizing:border-box} body{margin:0;background:linear-gradient(135deg,#0b1020,#151b3a);color:var(--text);font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif}
+    .wrap{max-width:920px;margin:40px auto;padding:20px}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    h1{margin:0 0 10px 0;font-size:clamp(26px,5vw,40px)}
+    p{color:var(--muted);line-height:1.6}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:center}
+    .img{aspect-ratio:4/3;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+    .img img{width:100%;height:100%;object-fit:cover}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(92,171,255,.15);border:1px solid rgba(92,171,255,.35);color:#cfe3ff;font-size:13px;margin-bottom:12px}
+    .footer{margin-top:18px;font-size:13px;color:#9fb0e8}
+    .theme-default .badge{background:rgba(92,171,255,.15)}
+    .theme-gold .badge{background:rgba(255,214,102,.14);border-color:rgba(255,214,102,.38);color:#ffe9ad}
+    .theme-rose .badge{background:rgba(255,126,171,.14);border-color:rgba(255,126,171,.38);color:#ffd3e0}
+  </style>
+</head>
+<body class="theme-{{THEME}}">
+  <div class="wrap">
+    <div class="card">
+      <div class="badge">Impression Direct 360</div>
+      <div class="hero">
+        <div>
+          <h1>{{HEADLINE}}</h1>
+          <p>This page was created automatically by ID360. Scan the QR to reach this link anywhere.</p>
+          <p class="footer">Theme: <strong>{{THEME}}</strong></p>
+        </div>
+        <div class="img">
+          <img src="{{IMAGE_URL}}" alt="featured" />
+        </div>
+      </div>
+    </div>
+    <p class="footer">© Impression Direct 360</p>
+  </div>
+</body>
+</html>
